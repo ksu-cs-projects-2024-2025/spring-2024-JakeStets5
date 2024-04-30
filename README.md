@@ -24,10 +24,16 @@ Cloning the databases may pose problems. Here are the following reccomendations:
 * As of May 10th, 2024, the API keys used to gather weather and location details will be deleted. To create and implement your own Open Weather Map key, follow these steps:
   * Click on the following link: https://openweathermap.org.
   * After creating an account or signing in, click on your account name in the top right corner -> "My API keys" -> "Generate".
-  * When your api key is generated copy it and replace the value of the variable "weatherApiKey" with your API key.
+  * When your api key is generated copy it and replace the value of the variable "weatherApiKey" within the "CurrentWeatherApiHelper" and "ForecastApiHelper" with your API key.
   * Click on the API option on the top ribbon. Subscribe to the One Call API 3.0 (costs may apply).
 * To create and implement your own geocoding API key, follow these steps:
-  * Click on the following link: https://cloud.google.com
+  * Click on the following link: https://cloud.google.com.
+  * After creating an account or signing in, select the hamburger menu in the top left -> "Google Maps Platform" -> "APIs and services".
+  * Search for "geocoding" in the search bar at the top -> click on "Geocoding API" -> "Enable".
+  * Click on the hamburger menu again -> "APIs & Services" -> "Credentials".
+  * Click on "Create Credentials" -> "API key".
+  * Replace the value of the variable "geocodeApiKey" within the "CurrentWeatherApiHelper" with your API key.
+    
 ## Usage
 
 Examples of how to use the project. Screenshots or code snippets.
