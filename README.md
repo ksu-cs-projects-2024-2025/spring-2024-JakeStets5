@@ -21,7 +21,8 @@ Cloning the databases may pose problems. Here are the following reccomendations:
   * Click on the Device Explorer, (it should show up on the right hand side of Android Studio; a phone under a magnifying glass), click on "data" -> "data" -> "jakestets5.ksu.heatstressapp" (or your package name if you change it)
   * Right-click on "databases".
   * Select "upload" and upload settings.db, SavedLocations.db, and either Cities.db(around 40,000 cities) or TrimmedCities.db(14 specific cities) from the directory the project is in.
-
+* As of May 10th, 2024, the API keys used to gather weather and location details will be deleted. To create and implement your own keys, follow these steps:
+  * Click on the following link: https://home.openweathermap.org
 ## Usage
 
 Examples of how to use the project. Screenshots or code snippets.
