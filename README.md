@@ -49,4 +49,4 @@ After installation, using the app is quite straightforward. Clicking the green a
 
 ## Contributing
 
-Instructions for how others can contribute to the project.
+Pull requests will not be responded to.
