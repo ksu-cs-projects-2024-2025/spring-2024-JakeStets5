@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forecast_cardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/detailsContainer"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/day_of_week_textView_rv"
+                android:layout_width="0dp"
+                android:text="Sunday:"
+                android:textStyle="bold"
+                android:background="@drawable/info_border_black"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+            </Space>
+            <TextView
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+            </Space>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:layout_height="match_parent">
+
+            </TextView>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp">
+
+        </Space>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/forecast_precipitation_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/precipitation_imageView_rv"
+                    android:src="@mipmap/precipitation_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/precipitation_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Precipitation"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/precipitation_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="30"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+            <LinearLayout
+                android:id="@+id/forecast_low_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/low_temp_image_rv"
+                    android:src="@mipmap/low_temp_icon"
+                    app:tint="#000000"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/low_temp_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Low"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/low_temp_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="10"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+            <LinearLayout
+                android:id="@+id/forecast_high_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/high_temp_image_rv"
+                    android:src="@mipmap/high_temp_icon"
+                    app:tint="#000000"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/high_temp_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="High"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/high_temp_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="50"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+
+        </Space>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/forecast_threat_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/threat_image_rv"
+                    android:src="@mipmap/threat_level_icon"
+                    app:tint="#000000"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/threat_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Threat Level"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/threat_level_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="low"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+            <LinearLayout
+                android:id="@+id/forecast_humidity_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/humidity_image_rv"
+                    android:src="@mipmap/humidity_icon"
+                    app:tint="#000000"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/humidity_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Humidity"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/humidity_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="45%"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content">
+
+            </Space>
+            <LinearLayout
+                android:id="@+id/forecast_wind_layout_rv"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/info_border_black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/wind_image_rv"
+                    android:src="@mipmap/wind_speed_icon"
+                    app:tint="#000000"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content">
+                </Space>
+                <TextView
+                    android:id="@+id/wind_title_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Wind Speed"
+                    android:textSize="15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wind_speed_textView_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="15mph"
+                    android:textSize="18sp">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

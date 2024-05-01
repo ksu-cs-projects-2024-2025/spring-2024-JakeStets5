@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "871955127815",
+    "project_id": "heatstressapp",
+    "storage_bucket": "heatstressapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871955127815:android:f34a65dcc7168d7088d4a2",
+        "android_client_info": {
+          "package_name": "jakestets5.ksu.heatstressapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkr7NbZOvUmC_Gt0nJeIwYPR2Xxxp3n-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

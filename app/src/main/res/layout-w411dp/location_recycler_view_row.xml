@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/location_cardView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="0dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/main_item_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/city_text_rv"
+            android:layout_width="wrap_content"
+            android:text="City, "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/state_text_rv"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black">
+
+        </TextView>
+        <TextView
+            android:id="@+id/country_text_rv"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Country"
+            android:layout_weight="5">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:background="@null"
+            android:src="@mipmap/save_icon"
+            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+        </ImageButton>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

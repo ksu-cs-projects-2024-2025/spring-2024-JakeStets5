@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/saved_locations_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.SavedLocationsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_day"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/saved_locations_back_btn"
+            android:src="@mipmap/back_icon"
+            android:layout_width="60dp"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:layout_height="60dp">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/saved_locations_title_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Saved Locations"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/saved_locations_recyclerView"
+        android:layout_below="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        tools:listitem="@layout/saved_locations_recycler_row">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

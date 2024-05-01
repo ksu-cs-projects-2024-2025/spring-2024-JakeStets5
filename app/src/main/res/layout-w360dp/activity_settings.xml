@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_layout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_day"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/settings_back_btn"
+            android:src="@mipmap/back_icon"
+            android:layout_width="60dp"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:layout_height="60dp">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/settings_title_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/breed_settings_title"
+            android:text = "Breed: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/breed_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:popupBackground="@drawable/spinner_popup_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/color_settings_title"
+            android:text = "Coat color: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/color_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/acclimation_settings_title"
+            android:text = "Acclimation: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/acclimation_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/health_settings_title"
+            android:text = "Health: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/health_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/shade_settings_title"
+            android:text = "Shade: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/shade_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/feed_settings_title"
+            android:text = "Days on feed: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/feed_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/manure_settings_title"
+            android:text = "Manure: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:lineSpacingExtra="-4dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/manure_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/water_settings_title"
+            android:text = "Water temp: "
+            android:textColor="@color/black"
+            android:lineSpacingExtra="-4dp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/info_border_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp">
+
+        </Space>
+
+        <Spinner
+            android:id="@+id/water_spinner"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            style="@style/SpinnerDayTheme"
+            android:layout_weight="2"
+            android:dropDownVerticalOffset="55dp"
+            android:background="@drawable/spinner_design_day"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+</LinearLayout>
