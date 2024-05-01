@@ -18,7 +18,6 @@ Cloning the databases may pose problems. Here are the following reccomendations:
 * Clone the repository. Open the project and run. If you are able to search the city London, great! The app has been cloned successfully.
   
 * If the app cannot find the table to query London from, or you would like to implement the larger database of cities, follow these steps:
-  * Download the 
   * Click on the hamburger menu in the top left -> click on "View" -> click on "Tool Windows" -> click on "Device Explorer"
   * Click on the Device Explorer, (it should show up on the right hand side of Android Studio; a phone under a magnifying glass), click on "data" -> "data" -> "jakestets5.ksu.heatstressapp" (or your package name if you change it)
   * Right-click on "databases".
