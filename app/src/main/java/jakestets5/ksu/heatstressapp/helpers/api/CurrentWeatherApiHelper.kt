@@ -1,6 +1,7 @@
 package jakestets5.ksu.heatstressapp.helpers.api
 
 import android.content.Context
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import com.android.volley.Response
@@ -333,6 +334,7 @@ class CurrentWeatherApiHelper(ma: MainActivity, lat: Double, long: Double, bA: I
                     relativeHumidity = humidity.toDouble()
                     ambientTemperature = tempMax
 
+
                     //Sunrise and Sunset
                     val sys = jsonObj.getJSONObject("sys")
                     val timezoneOffsetSeconds = jsonObj.getLong("timezone")
@@ -404,6 +406,7 @@ class CurrentWeatherApiHelper(ma: MainActivity, lat: Double, long: Double, bA: I
                     userLong = long
                     comprehensiveClimateIndex(breedAdjustment, colorAdjustment, acclimationAdjustment, healthAdjustment, shadeAdjustment, feedAdjustment, manureAdjustment, waterAdjustment)
 
+
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
@@ -435,9 +438,17 @@ class CurrentWeatherApiHelper(ma: MainActivity, lat: Double, long: Double, bA: I
      */
     private fun comprehensiveClimateIndex(bA: Int, cA: Int, aA: Int, hA: Int, sA: Int, fA: Int, mA: Int, wA: Int){
         //calculates the cci
-        val cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, radiationFormulaHelper.getSolarRadiation(userLat, userDate))
-        val adjustedCci = cci  + bA + cA + aA + hA + sA + fA + mA + wA
+        val solarRadiation = radiationFormulaHelper.getSolarRadiation(userLat, userDate)
+        var cci = 0.0
 
+        if(isDay){
+            cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, solarRadiation)
+        }
+        else{
+            cci = 0.0
+        }
+        val adjustedCci = cci  + bA + cA + aA + hA + sA + fA + mA + wA
+        Log.d("CCI", "$ambientTemperature, $relativeHumidity, $windSpeed, ${radiationFormulaHelper.getSolarRadiation(userLat, userDate)}, $cci")
         //calculates the level of threat based on the value returned by the cci
         if(adjustedCci <= 65.0){
             mainActivity.findViewById<TextView>(R.id.threat_level_textView).text = "low"

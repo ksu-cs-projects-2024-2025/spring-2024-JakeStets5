@@ -214,7 +214,16 @@ class ForecastApiHelper(context: Context, bA: Int, cA: Int, aA: Int, hA: Int, sA
      */
     fun comprehensiveClimateIndex(bA: Int, cA: Int, aA: Int, hA: Int, sA: Int, fA: Int, mA: Int, wA: Int): String{
         //uses the formula helpers to be implemented when hourly data can be retrieved
-        val cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, radiationFormulaHelper.getSolarRadiation(userLat, userDate))
+        val solarRadiation = radiationFormulaHelper.getSolarRadiation(userLat, userDate)
+        var cci = 0.0
+
+        if(isDay){
+            cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, solarRadiation)
+        }
+        else{
+            cci = 0.0
+        }
+
         val adjustedCci = cci + bA + cA + aA + hA + sA + fA + mA + wA
 
         if(adjustedCci <= 65.0){

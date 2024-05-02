@@ -271,7 +271,6 @@ class NotificationWorker(context: Context, workerParams: WorkerParameters): Work
     fun comprehensiveClimateIndex(): String{
         val cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, radiationFormulaHelper.getSolarRadiation(currentLat, currentDate))
         val adjustedCci = cci + breedAdjustment + acclimationAdjustment + colorAdjustment + feedAdjustment + healthAdjustment + manureAdjustment + shadeAdjustment + waterAdjustment
-        Log.d("noticci", "$cci $adjustedCci $acclimationAdjustment")
 
         if(adjustedCci <= 65.0){
             return "low"
