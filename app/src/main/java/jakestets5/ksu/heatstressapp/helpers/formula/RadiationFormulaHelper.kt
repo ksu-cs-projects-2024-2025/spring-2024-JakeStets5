@@ -32,7 +32,6 @@ class RadiationFormulaHelper() {
         val month = calendar.get(Calendar.MONTH) + 1
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        Log.d("julian", "${(1461 * (year + 4800 + (month - 14)/12))/4 +(367 * (month - 2 - 12 * ((month - 14)/12)))/12 - (3 * ((year + 4900 + (month - 14)/12)/100))/4 + day - 32075}")
         return (1461 * (year + 4800 + (month - 14)/12))/4 +(367 * (month - 2 - 12 * ((month - 14)/12)))/12 - (3 * ((year + 4900 + (month - 14)/12)/100))/4 + day - 32075
     }
 
@@ -45,10 +44,8 @@ class RadiationFormulaHelper() {
      */
     private fun calculateCoefficient(julianDay: Int, lat: Double): Double {
         return if(lat > 0){
-            Log.d("coefficient", "${asin(0.39795 * cos(0.2163108 + 2 * atan(0.9671396 * tan(0.0086 * (julianDay - 186)))))}")
             asin(0.39795 * cos(0.2163108 + 2 * atan(0.9671396 * tan(0.0086 * (julianDay - 186)))))
         } else{
-            Log.d("coefficient", "${asin(0.39795 * cos(0.2163108 + 2 * atan(0.9671396 * tan(0.0086 * (julianDay)))))}")
             asin(0.39795 * cos(0.2163108 + 2 * atan(0.9671396 * tan(0.0086 * (julianDay)))))
         }
     }
@@ -63,7 +60,6 @@ class RadiationFormulaHelper() {
     private fun calculateDayLength(lat: Double, coefficient: Double): Double {
         val radiansLat = lat * PI / 180
         //val radiansCoefficient = coefficient * PI / 180
-        Log.d("daylength", "${24 - (24 / PI) * acos((sin(0.8333 * PI / 180) + sin(radiansLat) * sin(coefficient)) / (cos(radiansLat) * cos(coefficient)))}")
         return 24 - (24 / PI) * acos((sin(0.8333 * PI / 180) + sin(radiansLat) * sin(coefficient)) / (cos(radiansLat) * cos(coefficient)))
     }
 
@@ -77,7 +73,6 @@ class RadiationFormulaHelper() {
     private fun SRkcal(dayLength: Double, lat: Double): Double {
         val baseValue = 31 * dayLength - 240
         val adjustment = 0.01 * baseValue * (23 - lat)
-        Log.d("radval", "${baseValue + adjustment}")
         return baseValue + adjustment
     }
 

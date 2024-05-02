@@ -439,16 +439,10 @@ class CurrentWeatherApiHelper(ma: MainActivity, lat: Double, long: Double, bA: I
     private fun comprehensiveClimateIndex(bA: Int, cA: Int, aA: Int, hA: Int, sA: Int, fA: Int, mA: Int, wA: Int){
         //calculates the cci
         val solarRadiation = radiationFormulaHelper.getSolarRadiation(userLat, userDate)
-        var cci = 0.0
 
-        if(isDay){
-            cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, solarRadiation)
-        }
-        else{
-            cci = 0.0
-        }
+        val cci = radiationFormulaHelper.calculateCCI(ambientTemperature, relativeHumidity, windSpeed, solarRadiation)
         val adjustedCci = cci  + bA + cA + aA + hA + sA + fA + mA + wA
-        Log.d("CCI", "$ambientTemperature, $relativeHumidity, $windSpeed, ${radiationFormulaHelper.getSolarRadiation(userLat, userDate)}, $cci")
+        Log.d("CCIval", "$ambientTemperature, $relativeHumidity, $windSpeed, ${radiationFormulaHelper.getSolarRadiation(userLat, userDate)}, $cci")
         //calculates the level of threat based on the value returned by the cci
         if(adjustedCci <= 65.0){
             mainActivity.findViewById<TextView>(R.id.threat_level_textView).text = "low"

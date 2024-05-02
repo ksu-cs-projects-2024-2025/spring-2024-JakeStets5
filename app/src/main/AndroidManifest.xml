@@ -13,13 +13,12 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/heat_stress_logo"
-        android:label="@string/heat_stress_prevention"
+        android:label="@string/app_name"
         android:roundIcon="@drawable/heat_stress_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HeatStressApp"

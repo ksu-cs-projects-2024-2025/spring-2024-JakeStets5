@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/save_icon">
+            android:src="@drawable/settings_icon">
 
         </ImageView>
 
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="This is the save icon">
+            android:text="This is the settings icon">
         </TextView>
 
         <TextView
@@ -44,7 +44,7 @@
             android:textAlignment="center"
             android:paddingRight="20dp"
             android:paddingLeft="20dp"
-            android:text="Clicking this button when you search a city saves the location to ''Saved Locations''">
+            android:text="Clicking this button shows different conditions and characteristics of your cattle that you'll be able to edit">
         </TextView>
     </LinearLayout>
 
