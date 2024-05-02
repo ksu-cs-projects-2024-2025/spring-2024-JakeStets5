@@ -2,7 +2,7 @@
 
 ## Description
 
-Herd Alert is an early warning app for cattle owners. It computes the Comprehensive Climate Index using a formula created by Hayati Koknaroglu and asseses the "heat threat" to cattle. If there is a high threat, cattle may die from the heat. 
+Herd Alert is an early warning app for cattle owners. It computes the Comprehensive Climate Index using a formula created by Hayati Koknaroglu and asseses the "heat threat" to cattle. If there is a high threat, cattle may die from the heat. Big thank you to Dr. Doina Caragea for mentoring me through this project.
 
 ## Table of Contents
 
