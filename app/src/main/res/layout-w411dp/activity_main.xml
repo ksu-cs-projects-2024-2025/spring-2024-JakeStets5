@@ -28,7 +28,6 @@
             <LinearLayout
                 android:id="@+id/button_layout"
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="10dp">
@@ -73,6 +72,7 @@
                     android:scaleType="centerCrop"
                     android:src="@mipmap/location_icon"
                     app:tint="#FFF"/>
+
             </LinearLayout>
 
             <LinearLayout

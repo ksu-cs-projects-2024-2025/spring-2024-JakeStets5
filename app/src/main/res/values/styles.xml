@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Style for the Spinner's popup theme -->
     <style name="SpinnerDayTheme" parent="ThemeOverlay.AppCompat.Light">
-        <!-- Customize your spinner items with custom text appearance and background -->
+
         <item name="android:textSize">15sp</item>
         <item name="android:drawableEnd">@drawable/spinner_arrow_day</item>
     </style>
-    <!-- Style for the Spinner's popup theme -->
+
     <style name="SpinnerNightTheme" parent="ThemeOverlay.AppCompat.Light">
-        <!-- Customize your spinner items with custom text appearance and background -->
+
         <item name="android:textSize">15sp</item>
         <item name="android:drawableEnd">@drawable/spinner_arrow_night</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/info_border_black</item>
     </style>
 </resources>

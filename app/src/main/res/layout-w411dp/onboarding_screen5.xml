@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OnboardingActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7 Day Forecast"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            style="@style/ButtonStyle"
+            android:textAllCaps="false"
+            android:layout_marginBottom="16dp">
+
+        </Button>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+
+        </Space>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="This is the forecast button">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:text="Clicking this button will show a 7 day forecast">
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

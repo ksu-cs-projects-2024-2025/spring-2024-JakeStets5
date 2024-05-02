@@ -101,7 +101,7 @@ class MainUIHelper (private val mainActivity: MainActivity){
         } else if (snowVolume > 0.0) {
             mainActivity.findViewById<TextView>(R.id.precipitation_textView).text =
                 "Snow: $snowVolume mm"
-            precipitationView.setImageResource(R.drawable.snowing_icon)
+            precipitationView.setImageResource(R.drawable.weather_snowing_icon)
         } else {
             mainActivity.findViewById<TextView>(R.id.precipitation_textView).text =
                 "Rain: $rainInt mm"
@@ -109,11 +109,11 @@ class MainUIHelper (private val mainActivity: MainActivity){
 
         val cloudImageView: ImageView = mainActivity.findViewById(R.id.cloud_coverage_imageView)
         when (cloudCoverageString) {
-            "Clear skies" -> cloudImageView.setImageResource(R.drawable.sunny_icon)
-            "Partly cloudy" -> cloudImageView.setImageResource(R.drawable.partly_cloudy_icon)
-            "Mostly cloudy" -> cloudImageView.setImageResource(R.drawable.partly_cloudy_icon)
-            "Cloudy" -> cloudImageView.setImageResource(R.drawable.partly_cloudy_icon)
-            "Overcast" -> cloudImageView.setImageResource(R.drawable.cloudy_icon)
+            "Clear skies" -> cloudImageView.setImageResource(R.drawable.weather_sunny_icon)
+            "Partly cloudy" -> cloudImageView.setImageResource(R.drawable.weather_partly_cloudy_icon)
+            "Mostly cloudy" -> cloudImageView.setImageResource(R.drawable.weather_partly_cloudy_icon)
+            "Cloudy" -> cloudImageView.setImageResource(R.drawable.weather_partly_cloudy_icon)
+            "Overcast" -> cloudImageView.setImageResource(R.drawable.weather_cloudy_icon)
         }
 
         if(userCountryCode == "US"){

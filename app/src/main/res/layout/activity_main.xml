@@ -60,7 +60,6 @@
                     android:layout_height="50dp"
                     android:background="@null"
                     android:padding="3dp"
-
                     android:scaleType="centerCrop"
                     android:src="@mipmap/settings_icon"
                     app:tint="#FFF" />
