@@ -72,6 +72,7 @@ class OnboardingActivity : AppCompatActivity() {
                 val prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
                 with(prefs.edit()) {
                     putBoolean("onboarding_complete", true)
+                    putBoolean("initial_settings", true)
                     apply()
                 }
                 startActivity(Intent(this, MainActivity::class.java))

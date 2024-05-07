@@ -31,7 +31,6 @@ class RadiationFormulaHelper() {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH) + 1
         val day = calendar.get(Calendar.DAY_OF_MONTH)
-
         return (1461 * (year + 4800 + (month - 14)/12))/4 +(367 * (month - 2 - 12 * ((month - 14)/12)))/12 - (3 * ((year + 4900 + (month - 14)/12)/100))/4 + day - 32075
     }
 
@@ -106,6 +105,7 @@ class RadiationFormulaHelper() {
         } else {
             21 - 14.7 * sqrt(wind + 0.5) + 1.7 * wind - 0.009 * wind.pow(2)
         }
+        // Calculates the temp adjusted to solar radiation
         val tempFactor = 0.06 * temp + 0.0175 * radiation + 0.00053 * temp.pow(2) - 6.4 + temp
         return humidityFactor + windFactor + tempFactor
     }

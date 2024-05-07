@@ -164,8 +164,15 @@ class MainActivity : ComponentActivity(), View.OnClickListener, CurrentWeatherAp
 
         setContentView(R.layout.activity_main)
 
+        //checking to see if initial settings values are needed
+        val prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+        val initialSettings = prefs.getBoolean("initial_settings", false)
+
         //updating the adjustments for the cci formula
         settingsdbHelper = SettingsDatabaseHelper(this)
+        if(initialSettings){
+            settingsdbHelper.addSettings(0, 0, 5, 5, 0, 2, 8, 2)
+        }
         updateSettings()
 
         // Initializing the WeatherApiHelper
